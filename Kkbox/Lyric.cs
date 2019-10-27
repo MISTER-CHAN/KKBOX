@@ -34,6 +34,8 @@ namespace Kkbox
         private void Lyric_Load(object sender, EventArgs e)
         {
             Size = new Size(Screen.PrimaryScreen.Bounds.Width, lblLyric.Height);
+            Location = new Point(0, Screen.PrimaryScreen.Bounds.Height - Height * 2);
+            lblLyric.Left = ClientRectangle.Width / 2 - lblLyric.Width / 2;
         }
     }
 }

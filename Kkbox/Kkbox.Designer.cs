@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kkbox));
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
@@ -42,8 +43,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Kkbox";
             this.Text = "KKBOX";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kkbox_FormClosing);
             this.ResumeLayout(false);
 
         }

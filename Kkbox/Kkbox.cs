@@ -25,6 +25,11 @@ namespace Kkbox
 
             this.lyric = lyric.lblLyric;
         }
+
+        private void Kkbox_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
         public void InitBrowser()
         {
             Cef.Initialize(new CefSettings());
