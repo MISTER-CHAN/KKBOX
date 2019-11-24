@@ -33,11 +33,9 @@ namespace Kkbox
         public void InitBrowser()
         {
             Cef.Initialize(new CefSettings());
-            browser = new ChromiumWebBrowser("play.kkbox.com");
+            browser = new ChromiumWebBrowser("https://play.kkbox.com");
             Controls.Add(browser);
             browser.Dock = DockStyle.Fill;
-
-
         }
 
         private void Timer_Tick(object sender, EventArgs e)
