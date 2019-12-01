@@ -45,8 +45,7 @@ namespace Kkbox
                 l = browser.GetBrowser().MainFrame.GetSourceAsync().Result;
                 if (l.Contains("lyrics_0"))
                 {
-                    l = new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Match(l) + "";
-                    lyric.Text = l;
+                    lyric.Text = string.Join("\n", new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Matches(l).Cast<Match>().Select(m => m.Value).ToArray());
                 }
             }
         }

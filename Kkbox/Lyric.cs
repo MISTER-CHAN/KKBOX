@@ -23,6 +23,7 @@ namespace Kkbox
             if (lblLyric.Width > 0 && lblLyric.Height > 0)
             {
                 lblLyric.Left = ClientRectangle.Width / 2 - lblLyric.Width / 2;
+                Height = lblLyric.Height;
             }
         }
 

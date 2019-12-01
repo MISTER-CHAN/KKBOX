@@ -43,6 +43,7 @@
             this.lblLyric.Size = new System.Drawing.Size(1181, 67);
             this.lblLyric.TabIndex = 0;
             this.lblLyric.Text = "啓動無限音樂，創造你的獨特音樂體驗！";
+            this.lblLyric.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblLyric.SizeChanged += new System.EventHandler(this.lblLyric_SizeChanged);
             this.lblLyric.DoubleClick += new System.EventHandler(this.lblLyric_DoubleClick);
             // 
