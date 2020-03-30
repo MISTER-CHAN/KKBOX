@@ -10,8 +10,8 @@ namespace Kkbox
         public Lyric()
         {
             InitializeComponent();
-            SetWindowLong(Handle, -20, 0x20 | 0x80000);
             new Kkbox(this).Show();
+            SetWindowLong(Handle, -20, 0x20 | 0x80000);
         }
 
         private void LblLyric_SizeChanged(object sender, EventArgs e)
@@ -36,6 +36,7 @@ namespace Kkbox
             {
                 WindowState = FormWindowState.Normal;
                 FormBorderStyle = FormBorderStyle.None;
+                SetWindowLong(Handle, -20, 0x20 | 0x80000);
             }
         }
 
