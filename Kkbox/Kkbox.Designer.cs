@@ -45,8 +45,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Kkbox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KKBOX";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kkbox_FormClosing);
+            this.Resize += new System.EventHandler(this.Kkbox_Resize);
             this.ResumeLayout(false);
 
         }

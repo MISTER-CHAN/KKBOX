@@ -16,19 +16,25 @@ namespace Kkbox
     public partial class Kkbox : Form
     {
         public ChromiumWebBrowser browser;
-        public Label lyric;
+        public Lyric lyric;
         private string l;
         public Kkbox(Lyric lyric)
         {
             InitializeComponent();
             InitBrowser();
 
-            this.lyric = lyric.lblLyric;
+            this.lyric = lyric;
         }
 
         private void Kkbox_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Kkbox_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                lyric.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
         public void InitBrowser()
         {
@@ -45,7 +51,7 @@ namespace Kkbox
                 l = browser.GetBrowser().MainFrame.GetSourceAsync().Result;
                 if (l.Contains("lyrics_0"))
                 {
-                    lyric.Text = string.Join("\n", new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Matches(l).Cast<Match>().Select(m => m.Value).ToArray());
+                    lyric.lblLyric.Text = string.Join("\n", new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Matches(l).Cast<Match>().Select(m => m.Value).ToArray());
                 }
             }
         }

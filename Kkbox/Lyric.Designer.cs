@@ -42,16 +42,15 @@
             this.lblLyric.Name = "lblLyric";
             this.lblLyric.Size = new System.Drawing.Size(1181, 67);
             this.lblLyric.TabIndex = 0;
-            this.lblLyric.Text = "啓動無限音樂，創造你的獨特音樂體驗！";
+            this.lblLyric.Text = "啟動無限音樂，創造你的獨特音樂體驗！";
             this.lblLyric.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblLyric.SizeChanged += new System.EventHandler(this.lblLyric_SizeChanged);
-            this.lblLyric.DoubleClick += new System.EventHandler(this.lblLyric_DoubleClick);
+            this.lblLyric.SizeChanged += new System.EventHandler(this.LblLyric_SizeChanged);
             // 
             // Lyric
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(223)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblLyric);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -60,8 +59,9 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(223)))));
+            this.TransparencyKey = System.Drawing.Color.White;
             this.Load += new System.EventHandler(this.Lyric_Load);
+            this.Resize += new System.EventHandler(this.Lyric_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
