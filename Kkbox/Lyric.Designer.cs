@@ -50,7 +50,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblLyric);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -59,7 +59,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
-            this.TransparencyKey = System.Drawing.Color.White;
+            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(175)))), ((int)(((byte)(217)))));
             this.Load += new System.EventHandler(this.Lyric_Load);
             this.Resize += new System.EventHandler(this.Lyric_Resize);
             this.ResumeLayout(false);

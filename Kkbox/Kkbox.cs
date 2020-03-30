@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CefSharp;
+﻿using CefSharp;
 using CefSharp.WinForms;
+using System;
+using System.Data;
+using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Kkbox
 {
@@ -22,7 +17,6 @@ namespace Kkbox
         {
             InitializeComponent();
             InitBrowser();
-
             this.lyric = lyric;
         }
 
