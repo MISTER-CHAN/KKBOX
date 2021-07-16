@@ -16,7 +16,7 @@ namespace Kkbox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lyric());
+            Application.Run(new Lyrics());
         }
     }
 }

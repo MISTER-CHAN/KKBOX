@@ -11,9 +11,9 @@ namespace Kkbox
     public partial class Kkbox : Form
     {
         public ChromiumWebBrowser browser;
-        public Lyric lyric;
+        public Lyrics lyric;
         private string l;
-        public Kkbox(Lyric lyric)
+        public Kkbox(Lyrics lyric)
         {
             InitializeComponent();
             InitBrowser();
@@ -45,7 +45,7 @@ namespace Kkbox
                 l = browser.GetBrowser().MainFrame.GetSourceAsync().Result;
                 if (l.Contains("lyrics_0"))
                 {
-                    lyric.lblLyric.Text = string.Join("\n", new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Matches(l).Cast<Match>().Select(m => m.Value).ToArray());
+                    lyric.lblLyrics.Text = string.Join("\n", new Regex("(?<=<li id=\"lyrics_\\d+\" ng-repeat=\"lyric in lyrics\" class=\"active\"> <a ng-click=\"seekByLyrics\\(lyric.start_time\\)\">).*?(?=</a> </li>)").Matches(l).Cast<Match>().Select(m => m.Value).ToArray());
                 }
             }
         }

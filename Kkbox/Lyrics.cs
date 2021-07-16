@@ -5,29 +5,29 @@ using System.Windows.Forms;
 
 namespace Kkbox
 {
-    public partial class Lyric : Form
+    public partial class Lyrics : Form
     {
-        public Lyric()
+        public Lyrics()
         {
             InitializeComponent();
             new Kkbox(this).Show();
             SetWindowLong(Handle, -20, 0x20 | 0x80000);
         }
 
-        private void LblLyric_SizeChanged(object sender, EventArgs e)
+        private void LblLyrics_SizeChanged(object sender, EventArgs e)
         {
-            if (lblLyric.Width > 0 && lblLyric.Height > 0)
+            if (lblLyrics.Width > 0 && lblLyrics.Height > 0)
             {
-                lblLyric.Left = ClientRectangle.Width / 2 - lblLyric.Width / 2;
-                Height = lblLyric.Height;
+                lblLyrics.Left = ClientRectangle.Width / 2 - lblLyrics.Width / 2;
+                Height = lblLyrics.Height;
             }
         }
 
-        private void Lyric_Load(object sender, EventArgs e)
+        private void Lyrics_Load(object sender, EventArgs e)
         {
-            Size = new Size(Screen.PrimaryScreen.Bounds.Width, lblLyric.Height);
+            Size = new Size(Screen.PrimaryScreen.Bounds.Width, lblLyrics.Height);
             Location = new Point(0, Screen.PrimaryScreen.Bounds.Height - Height * 2);
-            lblLyric.Left = ClientRectangle.Width / 2 - lblLyric.Width / 2;
+            lblLyrics.Left = ClientRectangle.Width / 2 - lblLyrics.Width / 2;
         }
 
         private void Lyric_Resize(object sender, EventArgs e)
